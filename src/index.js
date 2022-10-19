@@ -5,19 +5,6 @@ const path = require("path");
 const server = jsonServer.create();
 const router = jsonServer.router(path.join(__dirname, "db.json"));
 
-import microCors from "micro-cors";
-
-const cors = microCors();
-
-const handler = (req, res) => {
-  if (req.method === "OPTIONS") {
-    return res.status(200).send("ok");
-  }
-
-  // handle incoming request as usual
-};
-export default cors(handler);
-
 server.db = router.db;
 
 const rules = auth.rewriter({
@@ -25,11 +12,16 @@ const rules = auth.rewriter({
   // users: 600,
   // messages: 640
 });
+var corsOptions = {
+  origin: "https://jsonserver-nine.vercel.app",
+  optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+};
 
 // You must apply the middlewares in the following order
 server.use(cors());
 server.use(rules);
 server.use(auth);
+server.use(corsOptions);
 server.use((req, res, next) => {
   //     res.setHeader('Access-Control-Allow-Origin: https://assignmentangular.vercel.app','Access-Control-Allow-Methods: GET, POST, PUT')
   //     res.setHeader('Access-Control-Allow-Headers', '*')
