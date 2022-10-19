@@ -4,9 +4,20 @@ const cors = require("cors");
 const path = require("path");
 const server = jsonServer.create();
 const router = jsonServer.router(path.join(__dirname, "db.json"));
-// const middlewares = jsonServer.defaults({
-//   noCors: true,
-// })
+
+import microCors from "micro-cors";
+
+const cors = microCors();
+
+const handler = (req, res) => {
+  if (req.method === "OPTIONS") {
+    return res.status(200).send("ok");
+  }
+
+  // handle incoming request as usual
+};
+export default cors(handler);
+
 server.db = router.db;
 
 const rules = auth.rewriter({
