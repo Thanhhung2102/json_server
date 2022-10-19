@@ -12,16 +12,12 @@ const rules = auth.rewriter({
   // users: 600,
   // messages: 640
 });
-var corsOptions = {
-  origin: "https://jsonserver-nine.vercel.app",
-  optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
-};
 
 // You must apply the middlewares in the following order
 server.use(cors());
 server.use(rules);
 server.use(auth);
-server.use(corsOptions);
+
 server.use((req, res, next) => {
   //     res.setHeader('Access-Control-Allow-Origin: https://assignmentangular.vercel.app','Access-Control-Allow-Methods: GET, POST, PUT')
   //     res.setHeader('Access-Control-Allow-Headers', '*')
@@ -32,6 +28,12 @@ server.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
   res.setHeader("Access-Control-Allow-Headers", "*");
   res.setHeader("Access-Control-Allow-Credentials", true);
+  res.header({
+    origin: "https://assignmentweb208.vercel.app",
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    preflightContinue: false,
+    optionsSuccessStatus: 204,
+  });
   if (req.method === "POST") {
     req.body.createAt = Date.now();
     req.body.updateAt = Date.now();
