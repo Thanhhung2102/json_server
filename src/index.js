@@ -28,6 +28,10 @@ server.use(auth);
 server.use((req, res, next) => {
   //     res.setHeader('Access-Control-Allow-Origin: https://assignmentangular.vercel.app','Access-Control-Allow-Methods: GET, POST, PUT')
   //     res.setHeader('Access-Control-Allow-Headers', '*')
+  if (req.method === "OPTIONS") {
+    res.header("Access-Control-Allow-Methods", "PUT, POST, PATCH, DELETE, GET");
+    return res.status(200).json({});
+  }
   if (req.method === "POST") {
     req.body.createAt = Date.now();
     req.body.updateAt = Date.now();
