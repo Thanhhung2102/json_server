@@ -95,6 +95,14 @@
       "phone": "0345968543",
       "role": 0,
       "id": 4
+    },
+    {
+      "email": "hung@gmail.com",
+      "password": "$2a$10$UB8Oxj3KC6/3mHJ9lqHGBenoleFy7JZUYQjUQInki1PH1iA71QBgy",
+      "name": "hung@gmail.com",
+      "phone": "0345678567",
+      "role": 0,
+      "id": 5
     }
   ]
 }
