@@ -14,19 +14,20 @@ const rules = auth.rewriter({
 });
 
 // You must apply the middlewares in the following order
-server.use(cors());
+server.use(
+  cors({
+    origin: origin,
+    preflightContinue: true,
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    credentials: true,
+  })
+);
 server.use(rules);
 server.use(auth);
 
 server.use((req, res, next) => {
   //     res.setHeader('Access-Control-Allow-Origin: https://assignmentangular.vercel.app','Access-Control-Allow-Methods: GET, POST, PUT')
   //     res.setHeader('Access-Control-Allow-Headers', '*')
-  res.header({
-    origin: "https://assignmentweb208.vercel.app",
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-    preflightContinue: false,
-    optionsSuccessStatus: 204,
-  });
   if (req.method === "POST") {
     req.body.createAt = Date.now();
     req.body.updateAt = Date.now();
