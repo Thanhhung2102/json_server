@@ -1,0 +1,100 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Asics Gel Rocket 10",
+      "img": "https://res.cloudinary.com/hungtt/image/upload/v1665472812/Gel_rocket_10_xrqdyg.png",
+      "price": 1300000,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.",
+      "categoryId": 1
+    },
+    {
+      "id": 2,
+      "name": "Asics Sky Elite FF Tokyo",
+      "img": "https://res.cloudinary.com/hungtt/image/upload/v1665472813/tokyo_ff_mt_blrdim.png",
+      "price": 2500000,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.",
+      "categoryId": 3
+    },
+    {
+      "id": 3,
+      "name": "Asics Gel Tatic 2",
+      "img": "http://res.cloudinary.com/hungtt/image/upload/v1665634018/qj5rftychwcsufoynktt.png",
+      "price": 1400000,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua",
+      "categoryId": 1
+    },
+    {
+      "id": 4,
+      "name": "Asics NetBurner FF MT 2",
+      "img": "http://res.cloudinary.com/hungtt/image/upload/v1665633580/ioupbhduij3mqiebl2rr.png",
+      "price": 3000000,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua",
+      "categoryId": 2
+    },
+    {
+      "id": 5,
+      "name": "Acis Netburner FF MT",
+      "img": "http://res.cloudinary.com/hungtt/image/upload/v1665633618/fva0mppnxdynvt8gpman.png",
+      "price": 2600000,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua",
+      "categoryId": 2
+    },
+    {
+      "id": 6,
+      "name": "Acis Gel Rocket 9",
+      "img": "http://res.cloudinary.com/hungtt/image/upload/v1665633645/rzpwrcri9mthacedlf5n.png",
+      "price": 1300000,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua",
+      "categoryId": 1
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Gel"
+    },
+    {
+      "id": 2,
+      "name": "NetBurner"
+    },
+    {
+      "id": 3,
+      "name": "Sky Elite"
+    }
+  ],
+  "users": [
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$el/.OCcr4jEhUzrMdHdtwe0qPY.APsdOZAxMOq2AFMDMbGdfRKp9S",
+      "name": "Thanh Hung",
+      "phone": "0345968851",
+      "role": 1,
+      "id": 1
+    },
+    {
+      "email": "hungttph13998@fpt.edu.vn",
+      "password": "$2a$10$qL1vlpnmqBHScHbzWU3DjuvAQXhp2huvpXe6Y2ITRkxFQe1ne7uey",
+      "name": "Hung",
+      "phone": "0345678567",
+      "role": 0,
+      "id": 2
+    },
+    {
+      "email": "hungtt@gmail.com",
+      "password": "$2a$10$0OESjEPZKkqjD0aJyCpj7eESlQevfswe.6S2b06DBL.lEIoxhSDPG",
+      "name": "Hung",
+      "phone": "0345968851",
+      "role": 0,
+      "id": 3
+    },
+    {
+      "email": "hungtt@fpt.edu.vn",
+      "password": "$2a$10$m5YHi0r/9ALM5LIOMTmsOuil9OD5C33MrWRaNU3XJgWVeOTsDzwF2",
+      "name": "Tran Thanh Hung",
+      "phone": "0345968543",
+      "role": 0,
+      "id": 4
+    }
+  ]
+}
